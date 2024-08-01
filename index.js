@@ -9,6 +9,10 @@ app.get('/', function(request, response) {
 });
 app.listen(3000, () => console.log(`FUNCIONAMIENTO CORRECTO`));
 
+app.get('/healthz', (req, res) => {
+	res.status(200).send('OK')
+})
+
 //----------------------------- SISTEMA 24/7 -----------------------------//
 
 const Discord = require("discord.js");
